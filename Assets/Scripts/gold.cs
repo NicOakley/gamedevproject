@@ -28,7 +28,7 @@ public class gold : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.tag == "Player") {
-            Player.gold += Ogre.goldDropped;
+            Player.gold++;
             Debug.Log("Player has picked up gold:" + Player.gold);
 
             // destroy gold

@@ -18,7 +18,7 @@ public class Ogre : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        setHealth(0);
+        setHealth(100);
         
     }
 
@@ -109,9 +109,9 @@ public class Ogre : MonoBehaviour
         int gold = Random.Range(low, high);
         Debug.Log("Ogre dropped " + gold + " gold");
 
-        // Spawn gold
+        // Spawn gold x times
+        for (int i = 0; i < gold; i++)
         Instantiate(goldObject, transform.position, Quaternion.identity);
-
 
         return gold;
     }
