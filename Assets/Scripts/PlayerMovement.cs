@@ -12,11 +12,12 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator animator;
 
+    private float updateSpeed;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -27,7 +28,8 @@ public class PlayerMovement : MonoBehaviour
 
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
-        animator.SetFloat("Speed", movement.sqrMagnitude);
+        if (movement.sqrMagnitude > 0)
+            animator.SetFloat("Speed", 1);
         
         if(movement.x < 0){
             // flip sprite
@@ -42,7 +44,11 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        updateSpeed = moveSpeed;
+        if (movement.x != 0 && movement.y != 0)
+            updateSpeed *= 0.75f;
+
+        rb.MovePosition(rb.position + movement * updateSpeed * Time.fixedDeltaTime);
     }
 
 }
