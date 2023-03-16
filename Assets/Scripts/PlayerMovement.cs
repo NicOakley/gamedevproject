@@ -7,24 +7,20 @@ public class PlayerMovement : MonoBehaviour
 
     public float moveSpeed;
     public Rigidbody2D rb;
-
     private Vector2 movement;
-
     public Animator animator;
-
     private float updateSpeed;
 
     // Start is called before the first frame update
     void Start()
     {
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+    movement.x = Input.GetAxisRaw("Horizontal");
+    movement.y = Input.GetAxisRaw("Vertical");
 
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
@@ -40,6 +36,9 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = new Vector3(1, 1, 1);
         }
 
+        
+        
+
     } 
 
     void FixedUpdate()
@@ -49,6 +48,12 @@ public class PlayerMovement : MonoBehaviour
             updateSpeed *= 0.75f;
 
         rb.MovePosition(rb.position + movement * updateSpeed * Time.fixedDeltaTime);
+
+
+
+        
+
+
     }
 
 }
