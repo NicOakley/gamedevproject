@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Test2.unity
     guid: 4b05b33cd84c70243b257bd6dd63565e
   - enabled: 1
-    path: Assets/Scenes/Easy Levels/EasyLevel1.unity
+    path: Assets/Scenes/Easy Levels/EasyLevel2.unity
     guid: 90e7f9233541f694d8c4aea339c18c85
   m_configObjects: {}

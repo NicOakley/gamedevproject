@@ -42,17 +42,17 @@ public class Enemy : MonoBehaviour
         }
     
 
-    // if x velocity is greater than 0 (moving right)
-    if(rb.velocity.x > 0) {
-        // flip sprite to face right
-        sr.flipX = true;
-    }
+        // if x velocity is greater than 0 (moving right)
+        if (rb.velocity.x > 0) {
+            // flip sprite to face right
+            sr.flipX = true;
+        }
 
-    // if x velocity is less than 0 (moving left)
-    if(rb.velocity.x < 0) {
-        // flip sprite to face left
-        sr.flipX = false;
-    }
+        // if x velocity is less than 0 (moving left)
+        if(rb.velocity.x < 0) {
+            // flip sprite to face left
+            sr.flipX = false;
+        }
 
     }
 

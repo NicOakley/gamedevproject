@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 3147655176986781861}
   - component: {fileID: 3147655176986781849}
   - component: {fileID: 3147655176986781854}
-  - component: {fileID: 7635401701878249299}
   - component: {fileID: 4677944610775643443}
+  - component: {fileID: 1144978401572959197}
   m_Layer: 0
   m_Name: Ogre
   m_TagString: Untagged
@@ -134,19 +134,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &7635401701878249299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3147655176986781860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e202d11ede25ada44825afc4eda9f114, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 0.5
 --- !u!50 &4677944610775643443
 Rigidbody2D:
   serializedVersion: 4
@@ -168,3 +155,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1144978401572959197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147655176986781860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e202d11ede25ada44825afc4eda9f114, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  moveSpeed: 0.5
