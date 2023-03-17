@@ -4,18 +4,23 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-
-
-    [SerializeField] float moveSpeed = .5f;
-    Rigidbody2D rb;
-    Vector2 moveDirection;
-    Transform target;
-    SpriteRenderer sr;
+    public float health = 100f;
+    [SerializeField] private float moveSpeed = .5f;
+    private Rigidbody2D rb;
+    private Vector2 moveDirection;
+    private Transform target;
+    private SpriteRenderer sr;
+    private float damageTaken;
+    private HealthBar HealthBar;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        HealthBar = GetComponentInChildren<HealthBar>();
+        HealthBar.MAX_HEALTH = health;
+        HealthBar.health = health;
+
         sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         target = GameObject.Find("Protect").transform;
@@ -32,7 +37,7 @@ public class Enemy : MonoBehaviour
     }
 
     void FixedUpdate() {
-        if(target){
+        if (target){
             rb.velocity = new Vector2(moveDirection.x, moveDirection.y) * moveSpeed;
         }
     
@@ -52,10 +57,12 @@ public class Enemy : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D collision) {
-        Debug.Log("collision in enemy1 script");
-        if(collision.gameObject.tag == "Player") {
-            Destroy(this.gameObject);
+        if (collision.gameObject.tag == "Player") {
+            damageTaken = collision.gameObject.GetComponent<Player>().atkDamage;
+            HealthBar.health = HealthBar.health - damageTaken;
         }
-    }
 
+        if (HealthBar.health <= 0)
+            Destroy(gameObject);
+    }
 }

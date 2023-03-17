@@ -1,14 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class ProtectHealthBar : MonoBehaviour
+public class HealthBar : MonoBehaviour
 {
 
     private Image healthBar;
-    public static float MAX_HEALTH = 100;
-    public static float health = 10;
+    public float MAX_HEALTH = 100;
+    public float health = 50;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,5 @@ public class ProtectHealthBar : MonoBehaviour
     void Update()
     {
         healthBar.fillAmount = health / MAX_HEALTH;
-
-        
     }
 }

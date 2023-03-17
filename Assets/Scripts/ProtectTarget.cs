@@ -1,14 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ProtectTarget : MonoBehaviour
 {
-
+    private HealthBar HealthBar;
 
     // Start is called before the first frame update
     void Start()
     {
+        HealthBar = GetComponentInChildren<HealthBar>();
     }
 
     // Update is called once per frame
@@ -26,9 +28,9 @@ public class ProtectTarget : MonoBehaviour
         // If collision is with enemy1
         if (other.gameObject.tag == "Enemy1") {
             // take damage
-            ProtectHealthBar.health = ProtectHealthBar.health - 10;
+            HealthBar.health = HealthBar.health - 10;
             // if health is 0
-            if (ProtectHealthBar.health <= 0) {
+            if (HealthBar.health <= 0) {
                 // destroy self
                 Destroy(gameObject);
             }
