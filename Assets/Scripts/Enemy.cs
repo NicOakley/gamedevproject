@@ -51,11 +51,10 @@ public class Enemy : MonoBehaviour
 
     }
 
-    void OnCollisionEnter2D(Collision2D collision) {
+    void OnTriggerEnter2D(Collider2D collision) {
         Debug.Log("collision in enemy1 script");
-        if(collision.gameObject.tag == "Target") {
+        if(collision.gameObject.tag == "Player") {
             Destroy(this.gameObject);
-
         }
     }
 

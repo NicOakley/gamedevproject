@@ -6,6 +6,9 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
+    public InventoryManager inventoryManager;
+    public Item item;
+
     public static int gold = 0;
 
 
@@ -19,6 +22,18 @@ public class Player : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void PickupItem(Item item) {
+        inventoryManager.AddItem(item);
+    }
+
+    public void OnCollisionEnter2D(Collision2D other) {
+        if(other.gameObject.tag == "GroundItem"){
+            Debug.Log("Picked up item");
+            PickupItem(item);
+            Destroy(other.gameObject);
+        }
     }
 
 }

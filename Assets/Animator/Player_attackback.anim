@@ -75,6 +75,20 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
+  - time: 0.083333336
+    functionName: EnableAtkCollider
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: e7302fa60e2e00e429ab0d8038c92e65, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.16666667
+    functionName: DisableAtkCollider
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: e7302fa60e2e00e429ab0d8038c92e65, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 0.25
     functionName: EndAttack
     data: 

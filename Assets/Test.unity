@@ -6926,71 +6926,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1277098028 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8223526537549981497, guid: c975e69d6309ffb4e95501c2015951af, type: 3}
-  m_PrefabInstance: {fileID: 8223526536714463050}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &1277098030 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 8223526537549981500, guid: c975e69d6309ffb4e95501c2015951af, type: 3}
-  m_PrefabInstance: {fileID: 8223526536714463050}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1277098032 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8223526537549981503, guid: c975e69d6309ffb4e95501c2015951af, type: 3}
   m_PrefabInstance: {fileID: 8223526536714463050}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1277098034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1277098028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7302fa60e2e00e429ab0d8038c92e65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 1
-  rb: {fileID: 1277098030}
-  animator: {fileID: 1277098035}
-  AttackEvent:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!95 &1277098035
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1277098028}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 20a8d1d6b84f68842b658a910437e617, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
---- !u!114 &1277098038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1277098028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43358bc31fa956140baa783b25058095, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1320864428
 GameObject:
   m_ObjectHideFlags: 0
