@@ -9,16 +9,26 @@ public class PlayerControl : MonoBehaviour
     public float moveSpeed;
     public Rigidbody2D rb;
     public Animator animator;
-    private Collider2D attackCollider;
+    [SerializeField] private Collider2D sideCollider;
+    [SerializeField] private Collider2D backCollider;
+    [SerializeField] private Collider2D frontCollider;
     private Vector2 movement;
     private float updateSpeed;
     private bool IsAttacking = false;
+    private bool facingSide;
+    private bool facingBack;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (attackCollider != null)
-            attackCollider.enabled = false;
+        if (sideCollider != null)
+            sideCollider.enabled = false;
+
+        if (backCollider != null)
+            backCollider.enabled = false;
+
+        if (frontCollider != null)
+            frontCollider.enabled = false;
     }
 
     // Update is called once per frame
@@ -33,16 +43,22 @@ public class PlayerControl : MonoBehaviour
 
         if (movement.x != 0)
         {
+            facingSide = true;
+            facingBack = false;
             animator.SetBool("FacingSide", true);
             animator.SetBool("FacingBack", false);
         }
         else if (movement.y > 0)
         {
+            facingSide = false;
+            facingBack = true;
             animator.SetBool("FacingSide", false);
             animator.SetBool("FacingBack", true);
         }
         else if (movement.y < 0)
         {
+            facingSide = false;
+            facingBack = false;
             animator.SetBool("FacingSide", false);
             animator.SetBool("FacingBack", false);
         }
@@ -61,8 +77,6 @@ public class PlayerControl : MonoBehaviour
         if (Input.GetButtonDown("Attack"))
         {
             IsAttacking = true;
-            movement.x = 0;
-            movement.y = 0;
             animator.SetBool("IsAttacking", true);
         }
     }
@@ -71,6 +85,23 @@ public class PlayerControl : MonoBehaviour
     {
         animator.SetBool("IsAttacking", false);
         IsAttacking = false;
+    }
+
+    public void EnableAtkCollider()
+    {
+        if (facingSide)
+            sideCollider.enabled = true;
+        else if (facingBack)
+            backCollider.enabled = true;
+        else
+            frontCollider.enabled = true;
+    }
+
+    public void DisableAtkCollider()
+    {
+        sideCollider.enabled = false;
+        backCollider.enabled = false;
+        frontCollider.enabled = false;
     }
 
     void FixedUpdate()
