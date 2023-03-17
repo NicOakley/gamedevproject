@@ -4,34 +4,59 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public Transform target;
-    public float speed = 2f;
-    public Rigidbody2D rb;
+
+
+    [SerializeField] float moveSpeed = .5f;
+    Rigidbody2D rb;
+    Vector2 moveDirection;
+    Transform target;
+    SpriteRenderer sr;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
-        target = GameObject.FindGameObjectWithTag("Target").GetComponent<Transform>();
+        target = GameObject.Find("Protect").transform;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (target != null) {
+            Vector2 direction = (target.position - transform.position).normalized;
+            moveDirection = direction;
+        }
         
     }
 
-    void FixedUpdate()
-    {
+    void FixedUpdate() {
+        if(target){
+            rb.velocity = new Vector2(moveDirection.x, moveDirection.y) * moveSpeed;
+        }
+    
 
-        // move towards the target
-       // transform.position = Vector2.MoveTowards(transform.position, target.position, .1f * Time.deltaTime);
-
-        
-
-
-        
-        
+    // if x velocity is greater than 0 (moving right)
+    if(rb.velocity.x > 0) {
+        // flip sprite to face right
+        sr.flipX = true;
     }
+
+    // if x velocity is less than 0 (moving left)
+    if(rb.velocity.x < 0) {
+        // flip sprite to face left
+        sr.flipX = false;
+    }
+
+    }
+
+    void OnCollisionEnter2D(Collision2D collision) {
+        Debug.Log("collision in enemy1 script");
+        if(collision.gameObject.tag == "Target") {
+            Destroy(this.gameObject);
+
+        }
+    }
+
 }
