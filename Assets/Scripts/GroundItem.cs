@@ -19,6 +19,7 @@ public class GroundItem : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.tag == "Player"){
             Debug.Log("Picked up item");
+            // set the item in player.cs to this item
         }
     }
 }

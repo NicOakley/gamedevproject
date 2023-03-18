@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a4ccc018553f59645a609a6035b37d52, type: 3}
-  m_Name: GoldSword
+  m_Name: Gold Sword
   m_EditorClassIdentifier: 
-  type: 1
-  action: 0
-  stackable: 0
-  image: {fileID: 21300000, guid: 676eaeed9526b844fbea4f93a47570da, type: 3}
+  image: {fileID: 21300000, guid: 851d3099e2420cc4d89e9570d3ec044e, type: 3}
+  itemName: GoldSword
+  itemPrefab: {fileID: 1151990029131506749, guid: 36c2055b719928349b93b1d2334fc1c5, type: 3}

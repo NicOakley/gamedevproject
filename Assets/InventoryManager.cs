@@ -5,8 +5,13 @@ using UnityEngine;
 public class InventoryManager : MonoBehaviour
 {
 
+    public Transform playerPosition;
     public InventorySlot[] inventorySlots;
     public GameObject inventoryItemPrefab;
+
+    void Start() {
+        playerPosition = GameObject.Find("Player").transform;
+    }
 
     public void AddItem(Item item) {
 
@@ -19,6 +24,24 @@ public class InventoryManager : MonoBehaviour
             }
         }
 
+    }
+
+    public void DropItem() {
+
+    }
+
+
+
+
+    public bool isFull(){
+        for (int i = 0; i < inventorySlots.Length; i++){
+            InventorySlot slot = inventorySlots[i];
+            InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
+            if(itemInSlot == null) {
+                return false;
+            }
+        }
+        return true;
     }
 
     void SpawnNewItem(Item item, InventorySlot slot) {

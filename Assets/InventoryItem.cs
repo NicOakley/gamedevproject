@@ -6,11 +6,16 @@ using UnityEngine.EventSystems;
 public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public Item item;
+    public Transform playerPosition;
 
     [Header("UI")]
     public UnityEngine.UI.Image image;
 
     [HideInInspector] public Transform parentAfterDrag;
+
+    void Start() {
+        playerPosition = GameObject.Find("Player").transform;
+    }
 
 
     public void InitialiseItem(Item newItem)
@@ -36,6 +41,15 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     {
         image.raycastTarget = true;
         transform.SetParent(parentAfterDrag);
+
+        if (parentAfterDrag.tag == "dropZone")
+        {
+            // delete item
+            Destroy(gameObject);
+            // instantiate item on ground
+            Instantiate(item.itemPrefab, playerPosition.position, Quaternion.identity);
+            Debug.Log("Dropped");
+        }
     }
 
 
