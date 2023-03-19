@@ -24,7 +24,6 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
         // Weapon
         if (GameObject.FindWithTag("equipWeapon").transform.childCount > 0) {
-            Debug.Log("cock");
             Player.equipAtkDamage = item.atkStat;
         }
         else {
