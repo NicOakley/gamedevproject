@@ -8,8 +8,18 @@ public class Item : ScriptableObject {
 
 
     public Sprite image;
-    public string itemName;
     public GameObject itemPrefab;
+
+    public string itemName;
+    public string itemType;
+
+    public float levelReq;
+
+    public float atkStat;
+    public float hpRegenStat;
+    public float defStat;
+
+
 
 
 

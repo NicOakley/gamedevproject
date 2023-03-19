@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour
 
         sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
-        target = GameObject.Find("Protect").transform;
+        target = GameObject.Find("Target").transform;
     }
 
     // Update is called once per frame
@@ -43,7 +43,7 @@ public class Enemy : MonoBehaviour
     
 
         // if x velocity is greater than 0 (moving right)
-        if (rb.velocity.x > 0) {
+        if (rb.velocity.x >= 0) {
             // flip sprite to face right
             sr.flipX = true;
         }

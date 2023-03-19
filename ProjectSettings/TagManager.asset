@@ -7,6 +7,19 @@ TagManager:
   - Target
   - Enemy1
   - GroundItem
+  - dropZone
+  - equipHelmet
+  - equipWeapon
+  - equipChest
+  - equipShield
+  - equipLegs
+  - equipBoots
+  - ring
+  - bracelet
+  - equipRing
+  - equipBracelet
+  - inventorySlot
+  - equipZone
   layers:
   - Default
   - TransparentFX
