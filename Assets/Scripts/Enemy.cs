@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour
 
         sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
-        target = GameObject.Find("Target").transform;
+        target = GameObject.FindWithTag("Player").transform;
     }
 
     // Update is called once per frame
@@ -58,7 +58,7 @@ public class Enemy : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.tag == "Player") {
-            damageTaken = collision.gameObject.GetComponent<Player>().atkDamage;
+            damageTaken = collision.gameObject.GetComponent<Player>().atkStat;
             HealthBar.health = HealthBar.health - damageTaken;
         }
 

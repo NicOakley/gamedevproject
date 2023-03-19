@@ -19,6 +19,17 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     void FixedUpdate() {
         playerPosition = GameObject.Find("Player").transform;
+
+        // check what equipment slots are full
+
+        // Weapon
+        if (GameObject.FindWithTag("equipWeapon").transform.childCount > 0) {
+            Debug.Log("cock");
+            Player.equipAtkDamage = item.atkStat;
+        }
+        else {
+            Player.equipAtkDamage = 0;
+        }
     }
 
     void wrongItemType(){
@@ -135,6 +146,7 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     
         else{ wrongItemType(); Debug.Log("Dropped on " + parentAfterDrag.name);}
     }
+
  }
 
 

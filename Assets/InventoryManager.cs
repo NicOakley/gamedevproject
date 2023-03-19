@@ -13,6 +13,8 @@ public class InventoryManager : MonoBehaviour
         playerPosition = GameObject.Find("Player").transform;
     }
 
+
+
     public void AddItem(Item item) {
 
         for (int i = 0; i < inventorySlots.Length; i++){
@@ -23,10 +25,6 @@ public class InventoryManager : MonoBehaviour
                 return;
             }
         }
-
-    }
-
-    public void DropItem() {
 
     }
 
