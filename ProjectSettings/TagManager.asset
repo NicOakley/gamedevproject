@@ -20,6 +20,7 @@ TagManager:
   - equipBracelet
   - inventorySlot
   - equipZone
+  - inventory
   layers:
   - Default
   - TransparentFX

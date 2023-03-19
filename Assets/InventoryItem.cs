@@ -17,6 +17,10 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         playerPosition = GameObject.Find("Player").transform;
     }
 
+    void FixedUpdate() {
+        playerPosition = GameObject.Find("Player").transform;
+    }
+
     void wrongItemType(){
         Destroy(gameObject);
         Instantiate(item.itemPrefab, playerPosition.position, Quaternion.identity);
@@ -33,6 +37,7 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        playerPosition = GameObject.Find("Player").transform;
         image.raycastTarget = false;
         parentAfterDrag = transform.parent;
         transform.SetParent(transform.root);
@@ -40,11 +45,13 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void OnDrag(PointerEventData eventData)
     {
+        playerPosition = GameObject.Find("Player").transform;
         transform.position = Input.mousePosition;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        playerPosition = GameObject.Find("Player").transform;
         if (parentAfterDrag.tag == "inventorySlot")
         {
             transform.SetParent(parentAfterDrag);
@@ -126,8 +133,7 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
                 } else wrongItemType();
             }
     
-
-        else wrongItemType();
+        else{ wrongItemType(); Debug.Log("Dropped on " + parentAfterDrag.name);}
     }
  }
 
