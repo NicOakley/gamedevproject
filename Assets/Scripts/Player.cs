@@ -26,6 +26,8 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+
         // Set player stats
         atkStat = baseAtkDamage + equipAtkDamage;
         defStat = baseDefStat + equipDefStat;
@@ -39,6 +41,8 @@ public class Player : MonoBehaviour
         HealthBar = GetComponentInChildren<HealthBar>();
         HealthBar.MAX_HEALTH = health;
         HealthBar.health = health;
+
+
     }
 
     // Update is called once per frame
@@ -56,6 +60,15 @@ public class Player : MonoBehaviour
         // update stats from equipment
         atkStat = baseAtkDamage + equipAtkDamage;
         defStat = baseDefStat + equipDefStat;
+    }
+
+
+    void OnCollisionEnter2D(Collision2D other) {
+
+        if(other.gameObject.tag == "easyDoor"){
+            Debug.Log("collision");
+            Scenemanager.nextRoom();
+        }
     }
 
 

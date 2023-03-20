@@ -6,9 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Tutorial.unity
-    guid: d32367c88c5f1d040bc4d68eb0849b42
+    path: Assets/Scenes/MainHub 1.unity
+    guid: a3815f7e8b907d142b3c5344ef8f764b
   - enabled: 1
-    path: Assets/Scenes/MainHubCopy.unity
-    guid: 7ab349ea8736b2946acfa0ef675b9ce5
+    path: Assets/Scenes/Easy Levels/easyRoom1.unity
+    guid: 17702fc5d7eac23439a8317d0ae2e400
+  - enabled: 1
+    path: Assets/Scenes/Easy Levels/easyRoom2.unity
+    guid: 4cbc1092d1bc9da4bbd164ddd4513b4d
+  - enabled: 1
+    path: Assets/Scenes/Easy Levels/easyRoom3.unity
+    guid: a350ed456243f0347b283473a5eb8d60
+  - enabled: 1
+    path: Assets/Scenes/Easy Levels/easyRoom4.unity
+    guid: 674eebde42a271046b941900fe774ee0
+  - enabled: 1
+    path: Assets/Scenes/Easy Levels/easyRoom5.unity
+    guid: c652025538dd02f44ac0b42c3bfc3ac3
   m_configObjects: {}
