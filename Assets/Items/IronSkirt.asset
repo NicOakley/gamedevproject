@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a4ccc018553f59645a609a6035b37d52, type: 3}
-  m_Name: katana
+  m_Name: IronSkirt
   m_EditorClassIdentifier: 
-  image: {fileID: 21300000, guid: 4e8e304aaf250d44f838be834aed9aca, type: 3}
-  itemPrefab: {fileID: 1151990029131506749, guid: 087f9cbb390886d4b9ba0d31e4ecdd77, type: 3}
-  itemName: Katana
-  itemType: Weapon
+  image: {fileID: 21300000, guid: 1df77d12b9f1cf346861dee5388e5d57, type: 3}
+  itemPrefab: {fileID: 3470781792847744797, guid: 073a00bd43cdb0241aa438c1a4ebb973, type: 3}
+  itemName: ironSkirt
+  itemType: Legs
   levelReq: 0
-  atkStat: 1
+  atkStat: 0
   hpRegenStat: 0
-  defStat: 1
+  defStat: 0

@@ -11,17 +11,14 @@ public class Player : MonoBehaviour
 
     // Player stats (base)
     public float baseAtkDamage = 20f;
-    public float baseHpRegenStat = 0f;
     public float baseDefStat = 0f; // chance to block damage completely
 
     // Player stats (equipment)
     public static float equipAtkDamage;
-    public static float equipHpRegenStat;
     public static float equipDefStat;
 
     // Player stats (total)
     public float atkStat;
-    public float hpRegenStat;
     public float defStat;
 
 
@@ -31,13 +28,11 @@ public class Player : MonoBehaviour
     {
         // Set player stats
         atkStat = baseAtkDamage + equipAtkDamage;
-        hpRegenStat = baseHpRegenStat + equipHpRegenStat;
         defStat = baseDefStat + equipDefStat;
 
         // Log player stats
         Debug.Log("Player stats: ");
         Debug.Log("Attack: " + atkStat);
-        Debug.Log("Regen: " + hpRegenStat);
         Debug.Log("Defence: " + defStat);
 
 
@@ -49,13 +44,22 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            Debug.Log("Player stats: ");
+            Debug.Log("Attack: " + atkStat);
+            Debug.Log("Defence: " + defStat);
+        }
     }
 
     void FixedUpdate(){
         // update stats from equipment
         atkStat = baseAtkDamage + equipAtkDamage;
-        hpRegenStat = baseHpRegenStat + equipHpRegenStat;
         defStat = baseDefStat + equipDefStat;
     }
+
+
+
+
+
 }

@@ -17,6 +17,6 @@ MonoBehaviour:
   itemName: GoldSword
   itemType: Weapon
   levelReq: 0
-  atkStat: 40
+  atkStat: 5
   hpRegenStat: 0
-  defStat: 0
+  defStat: 1
