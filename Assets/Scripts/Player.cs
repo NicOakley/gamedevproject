@@ -22,10 +22,15 @@ public class Player : MonoBehaviour
     public float defStat;
 
 
+    public Scenemanager scenemanager;
+
+
+
 
     // Start is called before the first frame update
     void Start()
     {
+        // find with tag scenemanager
 
 
         // Set player stats
@@ -66,8 +71,19 @@ public class Player : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other) {
 
         if(other.gameObject.tag == "easyDoor"){
-            Debug.Log("collision");
-            Scenemanager.nextRoom();
+            scenemanager.startEasyDungeon();
+        }
+
+        if(other.gameObject.tag == "medDoor"){
+            scenemanager.startMedDungeon();
+        }
+
+        if(other.gameObject.tag == "hardDoor"){
+            scenemanager.startHardDungeon();
+        }
+
+        if(other.gameObject.tag == "bossDoor"){
+            scenemanager.startBossDungeon();
         }
     }
 

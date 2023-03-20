@@ -21,6 +21,12 @@ TagManager:
   - inventorySlot
   - equipZone
   - inventory
+  - easyDoor
+  - medDoor
+  - hardDoor
+  - bossDoor
+  - HealthBar
+  - Scenemanager
   layers:
   - Default
   - TransparentFX
