@@ -29,7 +29,7 @@ public class boss : MonoBehaviour
     bool stage2 = false;
     bool stage3 = false;
 
-
+    bool dead = false;
 
     public static string[] actions = {"chasePlayer", "moveToCenter", "standingCenter", "none"};
     public static string action = "chasePlayer";
@@ -59,6 +59,12 @@ public class boss : MonoBehaviour
             timerReached = true;
         }
 
+        if(!dead)
+        if( HealthBar.health <= 0 ){
+            Instantiate(levelExit, new Vector3(-5.17f, -.17f, -3f), Quaternion.identity);
+            Destroy(gameObject);
+            dead = true;
+        }
 
         
 
@@ -143,10 +149,6 @@ public class boss : MonoBehaviour
             rb.AddForce(knockback, ForceMode2D.Force);
         }
 
-        if (HealthBar.health <= 0) {
-            levelExit.SetActive(true);
-            Destroy(gameObject);
-        }
 
         if( stage1 == false && HealthBar.health <= HealthBar.MAX_HEALTH/2 ){
             stage1 = true;
