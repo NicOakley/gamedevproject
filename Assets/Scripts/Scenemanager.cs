@@ -47,6 +47,7 @@ public class Scenemanager : MonoBehaviour
         roomsCompleted = 0;
         medLevelStarted = false;
         easyLevelStarted = true;
+        playerT.position = new Vector3(7f,-.62f,-3);
         SceneManager.LoadScene("easyRoom1");
     }
 
@@ -54,6 +55,7 @@ public class Scenemanager : MonoBehaviour
         roomsCompleted = 0;
         easyLevelStarted = false;
         medLevelStarted = true;
+        playerT.position = new Vector3(-7.282f,-1.17f,-3);
         SceneManager.LoadScene("medRoom1");
     }
 
@@ -62,6 +64,7 @@ public class Scenemanager : MonoBehaviour
         easyLevelStarted = false;
         medLevelStarted = false;
         hardLevelStarted = true;
+        playerT.position = new Vector3(-.16f,-1.2f,-3);
         SceneManager.LoadScene("hardRoom1");
     }
 
@@ -71,6 +74,7 @@ public class Scenemanager : MonoBehaviour
         medLevelStarted = false;
         hardLevelStarted = false;
         bossLevelStarted = true;
+        playerT.position = new Vector3(-7.44f,-1.12f,-3);
         SceneManager.LoadScene("bossRoom1");
     }
 
@@ -81,11 +85,11 @@ public class Scenemanager : MonoBehaviour
         
         if( Scenemanager.easyLevelStarted == true){
             if( roomsCompleted == 1){
-            playerT.position = new Vector3(.4f,-.46f,0);
+            playerT.position = new Vector3(.15f,-1.21f,-3);
             SceneManager.LoadScene("easyRoom2");
             }
             if( roomsCompleted == 2){
-            playerT.position = new Vector3(-.164f,-1.3f,0);
+            playerT.position = new Vector3(7.51f,-.58f,-3);
             SceneManager.LoadScene("easyRoom3");
             }
             if( roomsCompleted == 3){
@@ -98,11 +102,11 @@ public class Scenemanager : MonoBehaviour
 
     if( Scenemanager.medLevelStarted == true){
             if( roomsCompleted == 1){
-            playerT.position = new Vector3(.4f,-.46f,0);
+            playerT.position = new Vector3(1.68f,2.2f,-3);
             SceneManager.LoadScene("medRoom2");
             }
             if( roomsCompleted == 2){
-            playerT.position = new Vector3(-.164f,-1.3f,0);
+            playerT.position = new Vector3(-.88f,-1.3f,-3);
             SceneManager.LoadScene("medRoom3");
             }
             if( roomsCompleted == 3){
@@ -114,11 +118,11 @@ public class Scenemanager : MonoBehaviour
 
         if( Scenemanager.hardLevelStarted == true){
             if( roomsCompleted == 1){
-            playerT.position = new Vector3(.4f,-.46f,0);
+            playerT.position = new Vector3(7.02f,-.62f,-3);
             SceneManager.LoadScene("hardRoom2");
             }
             if( roomsCompleted == 2){
-            playerT.position = new Vector3(-.164f,-1.3f,0);
+            playerT.position = new Vector3(-.87f,-1.28f,-3);
             SceneManager.LoadScene("hardRoom3");
             }
             if( roomsCompleted == 3 ){

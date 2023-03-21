@@ -87,6 +87,7 @@ public class Player : MonoBehaviour
         }
 
         if(other.gameObject.tag == "levelExit"){
+            Debug.Log("Level exit collision");
             scenemanager.nextRoom();
         }
     }

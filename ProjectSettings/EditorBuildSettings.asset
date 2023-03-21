@@ -17,52 +17,52 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hub Variations/MainHub 4.unity
     guid: dce2a551cd2d1554fbc275f7dd6acf2f
-  - enabled: 1
-    path: Assets/Scenes/bossRoom1.unity
-    guid: b2c4a02c206303e4badde9e3f28f50ae
-  - enabled: 1
-    path: Assets/Scenes/Easy Levels/easyRoom1.unity
-    guid: 17702fc5d7eac23439a8317d0ae2e400
-  - enabled: 1
-    path: Assets/Scenes/Easy Levels/easyRoom2.unity
-    guid: 4cbc1092d1bc9da4bbd164ddd4513b4d
-  - enabled: 1
-    path: Assets/Scenes/Easy Levels/easyRoom3.unity
-    guid: a350ed456243f0347b283473a5eb8d60
-  - enabled: 1
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
     path: Assets/Scenes/Easy Levels/easyRoom4.unity
     guid: 674eebde42a271046b941900fe774ee0
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Easy Levels/easyRoom5.unity
     guid: c652025538dd02f44ac0b42c3bfc3ac3
-  - enabled: 1
-    path: Assets/Scenes/Med Levels/medRoom1.unity
-    guid: 199f512b9969f58448bc282844dd8bb1
-  - enabled: 1
-    path: Assets/Scenes/Med Levels/medRoom2.unity
-    guid: 3072d9399ec6b01479709102835beeed
-  - enabled: 1
-    path: Assets/Scenes/Med Levels/medRoom3.unity
-    guid: f3f7a87a924f8e54fb9a46b5f0e2fe46
-  - enabled: 1
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
     path: Assets/Scenes/Med Levels/medRoom4.unity
     guid: ffa8c9106dfb43a4aa816bd3cf96ed32
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Med Levels/medRoom5.unity
     guid: 404041fbb8961274bb1dc6e5066c20c3
-  - enabled: 1
-    path: Assets/Scenes/Hard Levels/hardRoom1.unity
-    guid: bf03e66ca8c4b744dbfc6fd15abe0709
-  - enabled: 1
-    path: Assets/Scenes/Hard Levels/hardRoom2.unity
-    guid: c09bbc799fca0ad4896b52b62710d90d
-  - enabled: 1
-    path: Assets/Scenes/Hard Levels/hardRoom3.unity
-    guid: 9ef5c644158b7f846addf3157e3d9d77
-  - enabled: 1
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
     path: Assets/Scenes/Hard Levels/hardRoom4.unity
     guid: d5fab2fbb6c32ab4a8f7686adff4df22
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Hard Levels/hardRoom5.unity
     guid: d35431225b1b35c4f8079aa81cf38703
   m_configObjects: {}
