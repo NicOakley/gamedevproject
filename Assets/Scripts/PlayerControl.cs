@@ -18,6 +18,7 @@ public class PlayerControl : MonoBehaviour
     private bool IsAttacking = false;
     private bool facingSide;
     private bool facingBack;
+    private bool damageable = true;
 
     // Start is called before the first frame update
     void Start()
@@ -132,6 +133,26 @@ public class PlayerControl : MonoBehaviour
             float damageTaken = collision.gameObject.GetComponent<Enemy>().atkStat;
             gameObject.GetComponent<Player>().HealthBar.health -= damageTaken;
         }
+    }
+
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy1")
+        {
+            if (damageable)
+            {
+                StartCoroutine(WaitForSeconds());
+                float damageTaken = collision.gameObject.GetComponent<Enemy>().atkStat;
+                gameObject.GetComponent<Player>().HealthBar.health -= damageTaken;
+            }
+        }
+    }
+
+    IEnumerator WaitForSeconds()
+    {
+        damageable = false;
+        yield return new WaitForSecondsRealtime(0.5f);
+        damageable = true;
     }
 
     //Called once every physics update
