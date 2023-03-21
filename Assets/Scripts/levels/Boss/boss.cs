@@ -13,8 +13,10 @@ public class boss : MonoBehaviour
     private Transform target;
     private Transform bossPos;
     public GameObject levelExit;
-
     public GameObject projectile;
+    [SerializeField] private float knockWeakness = 0f;
+    [SerializeField] private Animator animator;
+    private float damageTaken;
 
     float timer = 0;
     bool timerReached = false;
@@ -54,31 +56,33 @@ public class boss : MonoBehaviour
             timerReached = true;
         }
 
-        if( stage1 == false && HealthBar.health <= HealthBar.MAX_HEALTH/2 ){
-            stage1 = true;
-            action = "moveToCenter";
-        }
 
-        if( stage2 == false && HealthBar.health <= HealthBar.MAX_HEALTH/4 ){
-            stage2 = true;
-            action = "moveToCenter";
-        }
-
-        if( stage3 == false && HealthBar.health <= HealthBar.MAX_HEALTH/1.1 ){
-            stage3 = true;
-            action = "moveToCenter";
-        }
-
-        if (HealthBar.health <= 0) {
-            levelExit.SetActive(true);
-            Destroy(gameObject);
-        }
+        
 
         
         
     }
 
     void FixedUpdate() {
+
+         // if x velocity is greater than 0 (moving right)
+        if (rb.velocity.x >= 0) {
+            // flip sprite to face right
+            sr.flipX = false;
+            if (animator != null)
+                animator.SetBool("IsMoving", true);
+        }
+        // if x velocity is less than 0 (moving left)
+        else if(rb.velocity.x < 0) {
+            // flip sprite to face left
+            sr.flipX = true;
+            if (animator != null)
+                animator.SetBool("IsMoving", true);
+        }
+        else {
+            if (animator != null)
+                animator.SetBool("IsMoving", false);
+        }
 
         if (action == "none"){
             return;
@@ -126,7 +130,38 @@ public class boss : MonoBehaviour
             Debug.Log("Boss is at center");
             action = "standingCenter";
         }
+
+        if (collision.gameObject.tag == "Player") {
+            damageTaken = collision.gameObject.GetComponent<Player>().atkStat;
+            HealthBar.health = HealthBar.health - damageTaken;
+
+            Vector2 direction = (transform.position - collision.transform.position).normalized;
+            Vector2 knockback = direction * knockWeakness;
+            rb.AddForce(knockback, ForceMode2D.Force);
+        }
+
+        if (HealthBar.health <= 0) {
+            levelExit.SetActive(true);
+            Destroy(gameObject);
+        }
+
+        if( stage1 == false && HealthBar.health <= HealthBar.MAX_HEALTH/2 ){
+            stage1 = true;
+            action = "moveToCenter";
+        }
+
+        if( stage2 == false && HealthBar.health <= HealthBar.MAX_HEALTH/4 ){
+            stage2 = true;
+            action = "moveToCenter";
+        }
+
+        if( stage3 == false && HealthBar.health <= HealthBar.MAX_HEALTH/1.1 ){
+            stage3 = true;
+            action = "moveToCenter";
+        }
     }
+
+
 
 
 
