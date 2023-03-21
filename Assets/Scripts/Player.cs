@@ -77,61 +77,61 @@ public class Player : MonoBehaviour
             // if scene is bossRoom1
 
             if(currentScene == "bossRoom1"){
-                playerT.position = new Vector3(-7.44f,-1.12f,-3);
+                playerT.position = new Vector3(-7.44f,-1.12f,1f);
                 SceneManager.LoadScene("bossRoom1");
             }
 
             // if scene is hardRoom1
             if(currentScene == "hardRoom1"){
-                playerT.position = new Vector3(-.16f,-1.2f,-3);
+                playerT.position = new Vector3(-.16f,-1.2f,1f);
                 SceneManager.LoadScene("hardRoom1");
             }
 
             // if scene is medRoom1
             if(currentScene == "medRoom1"){
-                playerT.position = new Vector3(-7.282f,-1.17f,-3);
+                playerT.position = new Vector3(-7.282f,-1.17f,1f);
                 SceneManager.LoadScene("medRoom1");
             }
 
             // if scene is easyRoom1
             if(currentScene == "easyRoom1"){
-                playerT.position = new Vector3(7f,-.62f,-3);
+                playerT.position = new Vector3(7f,-.62f,1f);
                 SceneManager.LoadScene("easyRoom1");
             }
 
             // if scene is easyRoom2
             if(currentScene == "easyRoom2"){
-                playerT.position = new Vector3(.15f,-1.21f,-3);
+                playerT.position = new Vector3(.15f,-1.21f,1f);
                 SceneManager.LoadScene("easyRoom2");
             }
 
             // if scene is easyRoom3
             if(currentScene == "easyRoom3"){
-                playerT.position = new Vector3(7.51f,-.58f,-3);
+                playerT.position = new Vector3(7.51f,-.58f,1f);
                 SceneManager.LoadScene("easyRoom3");
             }
 
             // if scene is medRoom2
             if(currentScene == "medRoom2"){
-                playerT.position = new Vector3(1.68f,2.2f,-3);
+                playerT.position = new Vector3(1.68f,2.2f,1f);
                 SceneManager.LoadScene("medRoom2");
             }
 
             // if scene is medRoom3
             if(currentScene == "medRoom3"){
-                playerT.position = new Vector3(-.88f,-1.3f,-3);
+                playerT.position = new Vector3(-.88f,-1.3f,1f);
                 SceneManager.LoadScene("medRoom3");
             }
 
             // if scene is hardRoom2
             if(currentScene == "hardRoom2"){
-                playerT.position = new Vector3(7.02f,-.62f,-3);
+                playerT.position = new Vector3(7.02f,-.62f,1f);
                 SceneManager.LoadScene("hardRoom2");
             }
 
             // if scene is hardRoom3
             if(currentScene == "hardRoom3"){
-                playerT.position = new Vector3(-.87f,-1.28f,-3);
+                playerT.position = new Vector3(-.87f,-1.28f,1f);
                 SceneManager.LoadScene("hardRoom3");
             }
 

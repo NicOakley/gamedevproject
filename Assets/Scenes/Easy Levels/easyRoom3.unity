@@ -2750,7 +2750,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147655176986781850, guid: ac80c912751f85047b9129a6856a048c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3147655176986781850, guid: ac80c912751f85047b9129a6856a048c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2783,6 +2783,10 @@ PrefabInstance:
     - target: {fileID: 3147655176986781860, guid: ac80c912751f85047b9129a6856a048c, type: 3}
       propertyPath: m_Name
       value: Chort
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147655176986781860, guid: ac80c912751f85047b9129a6856a048c, type: 3}
+      propertyPath: m_TagString
+      value: Enemy1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac80c912751f85047b9129a6856a048c, type: 3}
@@ -3607,7 +3611,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147655176986781850, guid: d87e5dc207a31b444abd07088d9e8c81, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3147655176986781850, guid: d87e5dc207a31b444abd07088d9e8c81, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3641,6 +3645,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Imp (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3147655176986781860, guid: d87e5dc207a31b444abd07088d9e8c81, type: 3}
+      propertyPath: m_TagString
+      value: Enemy1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d87e5dc207a31b444abd07088d9e8c81, type: 3}
 --- !u!1001 &1321430806
@@ -3664,7 +3672,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147655176986781850, guid: d87e5dc207a31b444abd07088d9e8c81, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3147655176986781850, guid: d87e5dc207a31b444abd07088d9e8c81, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3697,6 +3705,10 @@ PrefabInstance:
     - target: {fileID: 3147655176986781860, guid: d87e5dc207a31b444abd07088d9e8c81, type: 3}
       propertyPath: m_Name
       value: Imp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147655176986781860, guid: d87e5dc207a31b444abd07088d9e8c81, type: 3}
+      propertyPath: m_TagString
+      value: Enemy1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d87e5dc207a31b444abd07088d9e8c81, type: 3}
@@ -4206,7 +4218,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -5346,7 +5358,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147655176986781850, guid: d87e5dc207a31b444abd07088d9e8c81, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3147655176986781850, guid: d87e5dc207a31b444abd07088d9e8c81, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5379,6 +5391,10 @@ PrefabInstance:
     - target: {fileID: 3147655176986781860, guid: d87e5dc207a31b444abd07088d9e8c81, type: 3}
       propertyPath: m_Name
       value: Imp (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147655176986781860, guid: d87e5dc207a31b444abd07088d9e8c81, type: 3}
+      propertyPath: m_TagString
+      value: Enemy1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d87e5dc207a31b444abd07088d9e8c81, type: 3}
@@ -5455,7 +5471,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -5762,6 +5778,10 @@ PrefabInstance:
     - target: {fileID: 2354685914476702357, guid: 4bea2d6678c6b724e9358f999a237be9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2959482529021351705, guid: 4bea2d6678c6b724e9358f999a237be9, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3905127237309976458, guid: 4bea2d6678c6b724e9358f999a237be9, type: 3}
       propertyPath: m_Name
