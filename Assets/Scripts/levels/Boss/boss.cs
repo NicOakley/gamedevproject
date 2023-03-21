@@ -18,6 +18,8 @@ public class boss : MonoBehaviour
     [SerializeField] private Animator animator;
     private float damageTaken;
 
+    public GameObject mob;
+
     float timer = 0;
     bool timerReached = false;
 
@@ -36,6 +38,7 @@ public class boss : MonoBehaviour
     void Start()
     {
 
+        
         HealthBar = GetComponentInChildren<HealthBar>();
         HealthBar.MAX_HEALTH = health;
         HealthBar.health = health;
@@ -147,16 +150,22 @@ public class boss : MonoBehaviour
 
         if( stage1 == false && HealthBar.health <= HealthBar.MAX_HEALTH/2 ){
             stage1 = true;
+            Instantiate(mob, new Vector3(-7.049f, -.396f, -3f), Quaternion.identity);
+            Instantiate(mob, new Vector3(-3.486f, -2.072f, -3f), Quaternion.identity);
             action = "moveToCenter";
         }
 
         if( stage2 == false && HealthBar.health <= HealthBar.MAX_HEALTH/4 ){
             stage2 = true;
+            Instantiate(mob, new Vector3(-3.486f, -.4f, -3f), Quaternion.identity);
+            Instantiate(mob, new Vector3(-7.049f, -2.12f, -3f), Quaternion.identity);
             action = "moveToCenter";
         }
 
         if( stage3 == false && HealthBar.health <= HealthBar.MAX_HEALTH/1.1 ){
             stage3 = true;
+            Instantiate(mob, new Vector3(-7.049f, -.396f, -3f), Quaternion.identity);
+            Instantiate(mob, new Vector3(-7.049f, -2.12f, -3f), Quaternion.identity);
             action = "moveToCenter";
         }
     }

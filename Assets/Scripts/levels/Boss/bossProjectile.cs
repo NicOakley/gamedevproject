@@ -13,11 +13,14 @@ public class bossProjectile : MonoBehaviour
     private float targetX;
     private float targetY;
 
+    public HealthBar playerHealthBar;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
+        playerHealthBar = GameObject.FindWithTag("Player").GetComponentInChildren<HealthBar>();
         projectilePos = GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
         playerPos = GameObject.Find("Player").transform;
@@ -49,6 +52,7 @@ public class bossProjectile : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.tag == "Player") {
             Debug.Log("Player hit by projectile");
+            playerHealthBar.health -= 10;
             Destroy(gameObject);
         }
     }

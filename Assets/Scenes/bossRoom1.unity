@@ -245,6 +245,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3058812166020461560, guid: c975e69d6309ffb4e95501c2015951af, type: 3}
+      propertyPath: moveSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8223526537549981497, guid: c975e69d6309ffb4e95501c2015951af, type: 3}
       propertyPath: m_Name
       value: Player
@@ -255,11 +259,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8223526537549981503, guid: c975e69d6309ffb4e95501c2015951af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.459
+      value: -7.329
       objectReference: {fileID: 0}
     - target: {fileID: 8223526537549981503, guid: c975e69d6309ffb4e95501c2015951af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.148
+      value: -1.176
       objectReference: {fileID: 0}
     - target: {fileID: 8223526537549981503, guid: c975e69d6309ffb4e95501c2015951af, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5497,8 +5501,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8917396042512106673, guid: a1bf382e0f821e74a9772d193e683615, type: 3}
+      propertyPath: mob
+      value: 
+      objectReference: {fileID: 3147655176986781860, guid: c53be63334476434d9bf36b0e3a6bf8b, type: 3}
+    - target: {fileID: -8917396042512106673, guid: a1bf382e0f821e74a9772d193e683615, type: 3}
       propertyPath: health
-      value: 500
+      value: 750
       objectReference: {fileID: 0}
     - target: {fileID: -8917396042512106673, guid: a1bf382e0f821e74a9772d193e683615, type: 3}
       propertyPath: animator
@@ -5510,7 +5518,7 @@ PrefabInstance:
       objectReference: {fileID: 1517839829}
     - target: {fileID: -8917396042512106673, guid: a1bf382e0f821e74a9772d193e683615, type: 3}
       propertyPath: moveSpeed
-      value: 0.33
+      value: 0.39
       objectReference: {fileID: 0}
     - target: {fileID: -8917396042512106673, guid: a1bf382e0f821e74a9772d193e683615, type: 3}
       propertyPath: projectile
@@ -5522,7 +5530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147655176986781849, guid: a1bf382e0f821e74a9772d193e683615, type: 3}
       propertyPath: m_Size.y
-      value: 0.223
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 3147655176986781849, guid: a1bf382e0f821e74a9772d193e683615, type: 3}
       propertyPath: m_Offset.x
@@ -5530,7 +5538,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147655176986781849, guid: a1bf382e0f821e74a9772d193e683615, type: 3}
       propertyPath: m_Offset.y
-      value: -0.04
+      value: -0.08
       objectReference: {fileID: 0}
     - target: {fileID: 3147655176986781849, guid: a1bf382e0f821e74a9772d193e683615, type: 3}
       propertyPath: m_IsTrigger
@@ -5546,15 +5554,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147655176986781850, guid: a1bf382e0f821e74a9772d193e683615, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 3147655176986781850, guid: a1bf382e0f821e74a9772d193e683615, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 3147655176986781850, guid: a1bf382e0f821e74a9772d193e683615, type: 3}
       propertyPath: m_LocalScale.z
-      value: 3
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 3147655176986781850, guid: a1bf382e0f821e74a9772d193e683615, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7509,7 +7517,7 @@ GameObject:
   - component: {fileID: 1884673124}
   m_Layer: 0
   m_Name: attackColliderFront
-  m_TagString: Untagged
+  m_TagString: attColliderFront
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7522,7 +7530,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1884673121}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.069, y: -0.036, z: 0}
+  m_LocalPosition: {x: -0.069, y: -0.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7553,7 +7561,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.04, y: 0.2}
+  m_Size: {x: 0.04, y: 0.1}
   m_EdgeRadius: 0
 --- !u!114 &1884673124
 MonoBehaviour:
