@@ -9,6 +9,7 @@ public class PlayerControl : MonoBehaviour
     public float moveSpeed;
     public Rigidbody2D rb;
     public Animator animator;
+    public SpriteRenderer sr;
     [SerializeField] private Collider2D sideCollider;
     [SerializeField] private Collider2D backCollider;
     [SerializeField] private Collider2D frontCollider;
@@ -77,12 +78,12 @@ public class PlayerControl : MonoBehaviour
         //If the player is moving left, face the sprite left
         if (movement.x < 0)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            sr.flipX = true;
         }
         //If the player is moving right, face the sprite right
         else if (movement.x > 0)
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            sr.flipX = false;
         }
 
         //If the player presses an attack button
@@ -122,6 +123,15 @@ public class PlayerControl : MonoBehaviour
         sideCollider.enabled = false;
         backCollider.enabled = false;
         frontCollider.enabled = false;
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy1")
+        {
+            float damageTaken = collision.gameObject.GetComponent<Enemy>().atkStat;
+            gameObject.GetComponent<Player>().HealthBar.health -= damageTaken;
+        }
     }
 
     //Called once every physics update
