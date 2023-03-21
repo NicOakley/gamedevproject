@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
 
     public static int gold = 0;
     public float health = 100f;
-    private HealthBar HealthBar;
+    [HideInInspector] public HealthBar HealthBar;
 
     // Player stats (base)
     public float baseAtkDamage = 20f;
