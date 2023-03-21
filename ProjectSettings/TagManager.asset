@@ -29,6 +29,8 @@ TagManager:
   - Scenemanager
   - levelExit
   - inventoryUI
+  - boss
+  - centerTrigger
   layers:
   - Default
   - TransparentFX

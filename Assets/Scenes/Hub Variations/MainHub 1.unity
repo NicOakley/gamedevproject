@@ -11428,7 +11428,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3058812166020461560, guid: c975e69d6309ffb4e95501c2015951af, type: 3}
       propertyPath: moveSpeed
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3698829930151699506, guid: c975e69d6309ffb4e95501c2015951af, type: 3}
       propertyPath: scenemanager

@@ -90,6 +90,10 @@ public class Player : MonoBehaviour
             Debug.Log("Level exit collision");
             scenemanager.nextRoom();
         }
+
+        if(other.gameObject.tag == "boss"){
+            Debug.Log("Boss collision");
+        }
     }
 
 
