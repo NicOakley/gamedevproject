@@ -27,6 +27,7 @@ TagManager:
   - bossDoor
   - HealthBar
   - Scenemanager
+  - levelExit
   layers:
   - Default
   - TransparentFX

@@ -11,6 +11,10 @@ public class Scenemanager : MonoBehaviour
     public static bool hardLevelStarted = false;
     public static bool bossLevelStarted = false;
 
+    public static bool easyCompleted = false;
+    public static bool medCompleted = false;
+    public static bool hardCompleted = false;
+
     public static int roomsCompleted = 0;
 
     public static int dungeonsCompleted = 0;
@@ -85,19 +89,9 @@ public class Scenemanager : MonoBehaviour
             SceneManager.LoadScene("easyRoom3");
             }
             if( roomsCompleted == 3){
-            SceneManager.LoadScene("easyRoom4");
-             }
-            if( roomsCompleted == 4){
-            playerT.position = new Vector3(-.86f, -1.288f, 0);
-            SceneManager.LoadScene("easyRoom5");
+            Scenemanager.easyCompleted = true;
+            Scenemanager.loadHub();
             }
-            if( roomsCompleted == 5){
-            Scenemanager.roomsCompleted = 0;
-            Scenemanager.easyLevelStarted = false;
-            Scenemanager.dungeonsCompleted = 1;
-            playerT.position = new Vector3(-.48f, -.11f, 0);
-            SceneManager.LoadScene("mainHub 2");
-        }
         }
 
 
@@ -112,18 +106,8 @@ public class Scenemanager : MonoBehaviour
             SceneManager.LoadScene("medRoom3");
             }
             if( roomsCompleted == 3){
-            SceneManager.LoadScene("medRoom4");
-             }
-            if( roomsCompleted == 4){
-            playerT.position = new Vector3(-.86f, -1.288f, 0);
-            SceneManager.LoadScene("medRoom5");
-            }
-            if( roomsCompleted == 5){
-            Scenemanager.roomsCompleted = 0;
-            Scenemanager.easyLevelStarted = false;
-            Scenemanager.dungeonsCompleted = 2;
-            playerT.position = new Vector3(-.48f, -.11f, 0);
-            SceneManager.LoadScene("mainHub 3");
+            Scenemanager.medCompleted = true;
+            Scenemanager.loadHub();
         }
         }
 
@@ -137,21 +121,9 @@ public class Scenemanager : MonoBehaviour
             playerT.position = new Vector3(-.164f,-1.3f,0);
             SceneManager.LoadScene("hardRoom3");
             }
-            if( roomsCompleted == 3){
-            SceneManager.LoadScene("hardRoom4");
-             }
-            if( roomsCompleted == 4){
-            playerT.position = new Vector3(-.86f, -1.288f, 0);
-            SceneManager.LoadScene("hardRoom5");
-            }
-            if( roomsCompleted == 5 ){
-            Scenemanager.roomsCompleted = 0;
-            Scenemanager.easyLevelStarted = false;
-            Scenemanager.medLevelStarted = false;
-            Scenemanager.hardLevelStarted = false;
-            Scenemanager.dungeonsCompleted = 3;
-            playerT.position = new Vector3(-.48f, -.11f, 0);
-            SceneManager.LoadScene("mainHub 4");
+            if( roomsCompleted == 3 ){
+            Scenemanager.hardCompleted = true;
+            Scenemanager.loadHub();
         }
     }
 
@@ -161,15 +133,37 @@ public class Scenemanager : MonoBehaviour
             Scenemanager.medLevelStarted = false;
             Scenemanager.hardLevelStarted = false;
             Scenemanager.bossLevelStarted = false;
-            Scenemanager.dungeonsCompleted = 4;
             playerT.position = new Vector3(-.48f, -.11f, 0);
-            SceneManager.LoadScene("mainHub 5");
+            Scenemanager.loadHub();
         }
 
 
 
 
 
+    }
+
+    public static void loadHub(){
+        Scenemanager.roomsCompleted = 0;
+        Scenemanager.easyLevelStarted = false;
+        Scenemanager.medLevelStarted = false;
+        Scenemanager.hardLevelStarted = false;
+        Scenemanager.bossLevelStarted = false;
+        playerT.position = new Vector3(-.48f, -.11f, 0);
+
+
+        if(hardCompleted == true) {
+            SceneManager.LoadScene("mainHub 4");
+        }
+        else if(medCompleted == true) {
+            SceneManager.LoadScene("mainHub 3");
+        }
+        else if(easyCompleted == true) {
+            SceneManager.LoadScene("mainHub 2");
+        }
+        else {
+            SceneManager.LoadScene("mainHub 1");
+        }
     }
 
 

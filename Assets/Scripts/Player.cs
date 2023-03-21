@@ -85,6 +85,10 @@ public class Player : MonoBehaviour
         if(other.gameObject.tag == "bossDoor"){
             scenemanager.startBossDungeon();
         }
+
+        if(other.gameObject.tag == "levelExit"){
+            scenemanager.nextRoom();
+        }
     }
 
 
