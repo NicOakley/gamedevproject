@@ -28,6 +28,7 @@ TagManager:
   - HealthBar
   - Scenemanager
   - levelExit
+  - inventoryUI
   layers:
   - Default
   - TransparentFX

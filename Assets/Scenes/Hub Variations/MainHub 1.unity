@@ -7646,6 +7646,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -65
       objectReference: {fileID: 0}
+    - target: {fileID: 2093708219, guid: 89553eef772cdfe498235ffedc906679, type: 3}
+      propertyPath: m_margin.w
+      value: 27.558947
+      objectReference: {fileID: 0}
+    - target: {fileID: 2093708219, guid: 89553eef772cdfe498235ffedc906679, type: 3}
+      propertyPath: m_margin.z
+      value: 118.34141
+      objectReference: {fileID: 0}
+    - target: {fileID: 93245492474996980, guid: 89553eef772cdfe498235ffedc906679, type: 3}
+      propertyPath: m_margin.w
+      value: 28.464556
+      objectReference: {fileID: 0}
+    - target: {fileID: 93245492474996980, guid: 89553eef772cdfe498235ffedc906679, type: 3}
+      propertyPath: m_margin.z
+      value: 118.30596
+      objectReference: {fileID: 0}
     - target: {fileID: 93245493375397671, guid: 89553eef772cdfe498235ffedc906679, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -7758,9 +7774,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 93245493889060961, guid: 89553eef772cdfe498235ffedc906679, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 93245493889060972, guid: 89553eef772cdfe498235ffedc906679, type: 3}
+      propertyPath: m_text
+      value: Open Inventory [ Tab ]
+      objectReference: {fileID: 0}
+    - target: {fileID: 93245493889060972, guid: 89553eef772cdfe498235ffedc906679, type: 3}
+      propertyPath: m_margin.w
+      value: 25.648756
+      objectReference: {fileID: 0}
+    - target: {fileID: 93245493889060972, guid: 89553eef772cdfe498235ffedc906679, type: 3}
+      propertyPath: m_margin.x
+      value: -7.979599
+      objectReference: {fileID: 0}
+    - target: {fileID: 93245493889060972, guid: 89553eef772cdfe498235ffedc906679, type: 3}
+      propertyPath: m_margin.z
+      value: 46.08005
+      objectReference: {fileID: 0}
     - target: {fileID: 93245494109637039, guid: 89553eef772cdfe498235ffedc906679, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 93245494109637039, guid: 89553eef772cdfe498235ffedc906679, type: 3}
+      propertyPath: m_TagString
+      value: inventoryUI
       objectReference: {fileID: 0}
     - target: {fileID: 800266992029999778, guid: 89553eef772cdfe498235ffedc906679, type: 3}
       propertyPath: m_AnchorMax.y
@@ -8303,6 +8343,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.3090333, y: 0.5526579}
   m_EdgeRadius: 0
+--- !u!1 &704073423 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 93245494109637039, guid: 89553eef772cdfe498235ffedc906679, type: 3}
+  m_PrefabInstance: {fileID: 425963102}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &722598708
 GameObject:
   m_ObjectHideFlags: 0
@@ -10137,24 +10182,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 745510236}
   m_CullTransparentMesh: 1
---- !u!1 &796091730 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5867964182710606004, guid: 090883c5f848f4a46af7afc36c06072d, type: 3}
-  m_PrefabInstance: {fileID: 2074693918}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &796091733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 796091730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18d5feb9ceb65af46a19cfbf43f4c4c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectID: 
 --- !u!1 &819840210
 GameObject:
   m_ObjectHideFlags: 0
@@ -11550,6 +11577,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: inventoryManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5867964182710606005, guid: 090883c5f848f4a46af7afc36c06072d, type: 3}
+      propertyPath: inventoryUI
+      value: 
+      objectReference: {fileID: 704073423}
     - target: {fileID: 5867964182710606005, guid: 090883c5f848f4a46af7afc36c06072d, type: 3}
       propertyPath: inventorySlots.Array.data[0]
       value: 

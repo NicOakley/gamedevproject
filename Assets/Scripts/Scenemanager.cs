@@ -37,9 +37,7 @@ public class Scenemanager : MonoBehaviour
     void Update()
     {
 
-        if(Input.GetKeyDown(KeyCode.O)){
-            nextRoom();
-        }
+
         
     }
 

@@ -5,12 +5,34 @@ using UnityEngine;
 public class InventoryManager : MonoBehaviour
 {
 
+
     public Transform playerPosition;
     public InventorySlot[] inventorySlots;
     public GameObject inventoryItemPrefab;
 
+    public GameObject inventoryUI;
+
     void Start() {
         playerPosition = GameObject.Find("Player").transform;
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            // if inventoryUI is active, deactivate it
+            if (inventoryUI.activeSelf)
+            {
+                inventoryUI.SetActive(false);
+            }
+            // if inventoryUI is not active, activate it
+            else
+            {
+                inventoryUI.SetActive(true);
+            }
+
+            
+        }
     }
 
 
