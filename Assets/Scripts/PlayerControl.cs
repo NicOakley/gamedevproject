@@ -79,12 +79,14 @@ public class PlayerControl : MonoBehaviour
         //If the player is moving left, face the sprite left
         if (movement.x < 0)
         {
-            sr.flipX = true;
+            transform.localScale = new Vector3(-1, 1, 1);
+            gameObject.GetComponent<Player>().HealthBar.transform.localScale = new Vector3(-1, 1, 1);
         }
         //If the player is moving right, face the sprite right
         else if (movement.x > 0)
         {
-            sr.flipX = false;
+            transform.localScale = new Vector3(1, 1, 1);
+            gameObject.GetComponent<Player>().HealthBar.transform.localScale = new Vector3(1, 1, 1);
         }
 
         //If the player presses an attack button
