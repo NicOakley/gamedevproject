@@ -21,6 +21,7 @@ public class Scenemanager : MonoBehaviour
 
     // player transform
     public static Transform playerT;
+    public static HealthBar playerHealthBar;
 
 
 
@@ -28,20 +29,20 @@ public class Scenemanager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //set levelExit to false
+
+        playerHealthBar = GameObject.FindWithTag("Player").GetComponentInChildren<HealthBar>();
         playerT = GameObject.Find("Player").transform;
         Debug.Log(roomsCompleted);
         Debug.Log(easyLevelStarted);
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
 
-        
-    }
+
 
     public void startEasyDungeon(){
+        playerHealthBar.health = 100f;
         roomsCompleted = 0;
         medLevelStarted = false;
         easyLevelStarted = true;
@@ -50,6 +51,7 @@ public class Scenemanager : MonoBehaviour
     }
 
     public void startMedDungeon(){
+        playerHealthBar.health = 100f;
         roomsCompleted = 0;
         easyLevelStarted = false;
         medLevelStarted = true;
@@ -58,6 +60,7 @@ public class Scenemanager : MonoBehaviour
     }
 
     public void startHardDungeon(){
+        playerHealthBar.health = 100f;
         roomsCompleted = 0;
         easyLevelStarted = false;
         medLevelStarted = false;
@@ -67,6 +70,7 @@ public class Scenemanager : MonoBehaviour
     }
 
     public void startBossDungeon(){
+        playerHealthBar.health = 100f;
         roomsCompleted = 0;
         easyLevelStarted = false;
         medLevelStarted = false;
@@ -83,14 +87,17 @@ public class Scenemanager : MonoBehaviour
         
         if( Scenemanager.easyLevelStarted == true){
             if( roomsCompleted == 1){
+                playerHealthBar.health = 100f;
             playerT.position = new Vector3(.15f,-1.21f,1f);
             SceneManager.LoadScene("easyRoom2");
             }
             if( roomsCompleted == 2){
+                playerHealthBar.health = 100f;
             playerT.position = new Vector3(7.51f,-.58f,1f);
             SceneManager.LoadScene("easyRoom3");
             }
             if( roomsCompleted == 3){
+                playerHealthBar.health = 100f;
             Scenemanager.easyCompleted = true;
             Scenemanager.loadHub();
             }
@@ -100,14 +107,17 @@ public class Scenemanager : MonoBehaviour
 
     if( Scenemanager.medLevelStarted == true){
             if( roomsCompleted == 1){
+                playerHealthBar.health = 100f;
             playerT.position = new Vector3(1.68f,2.2f,1f);
             SceneManager.LoadScene("medRoom2");
             }
             if( roomsCompleted == 2){
+                playerHealthBar.health = 100f;
             playerT.position = new Vector3(-.88f,-1.3f,1f);
             SceneManager.LoadScene("medRoom3");
             }
             if( roomsCompleted == 3){
+                playerHealthBar.health = 100f;
             Scenemanager.medCompleted = true;
             Scenemanager.loadHub();
         }
@@ -116,20 +126,24 @@ public class Scenemanager : MonoBehaviour
 
         if( Scenemanager.hardLevelStarted == true){
             if( roomsCompleted == 1){
+                playerHealthBar.health = 100f;
             playerT.position = new Vector3(7.02f,-.62f,1f);
             SceneManager.LoadScene("hardRoom2");
             }
             if( roomsCompleted == 2){
+                playerHealthBar.health = 100f;
             playerT.position = new Vector3(-.87f,-1.28f,1f);
             SceneManager.LoadScene("hardRoom3");
             }
             if( roomsCompleted == 3 ){
+                playerHealthBar.health = 100f;
             Scenemanager.hardCompleted = true;
             Scenemanager.loadHub();
         }
     }
 
         if( Scenemanager.bossLevelStarted == true){
+            playerHealthBar.health = 100f;
             Scenemanager.roomsCompleted = 0;
             Scenemanager.easyLevelStarted = false;
             Scenemanager.medLevelStarted = false;
@@ -146,6 +160,7 @@ public class Scenemanager : MonoBehaviour
     }
 
     public static void loadHub(){
+        playerHealthBar.health = 100f;
         Scenemanager.roomsCompleted = 0;
         Scenemanager.easyLevelStarted = false;
         Scenemanager.medLevelStarted = false;
@@ -155,15 +170,19 @@ public class Scenemanager : MonoBehaviour
 
 
         if(hardCompleted == true) {
+            playerHealthBar.health = 100f;
             SceneManager.LoadScene("mainHub 4");
         }
         else if(medCompleted == true) {
+            playerHealthBar.health = 100f;
             SceneManager.LoadScene("mainHub 3");
         }
         else if(easyCompleted == true) {
+            playerHealthBar.health = 100f;
             SceneManager.LoadScene("mainHub 2");
         }
         else {
+            playerHealthBar.health = 100f;
             SceneManager.LoadScene("mainHub 1");
         }
     }

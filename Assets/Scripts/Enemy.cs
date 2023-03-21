@@ -16,6 +16,8 @@ public class Enemy : MonoBehaviour
     private float damageTaken;
     private HealthBar HealthBar;
 
+    public GameObject[] randomDropsArray;
+
 
     // Start is called before the first frame update
     void Start()
@@ -67,6 +69,8 @@ public class Enemy : MonoBehaviour
     }
 
 
+
+
     void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.tag == "Player") {
             damageTaken = collision.gameObject.GetComponent<Player>().atkStat;
@@ -77,7 +81,17 @@ public class Enemy : MonoBehaviour
             rb.AddForce(knockback, ForceMode2D.Force);
         }
 
-        if (HealthBar.health <= 0)
+        if (HealthBar.health <= 0){
+            Debug.Log("Rolling for random drop");
+            if (Random.Range(0, 12) == 0) {
+                Debug.Log("Rolling for random drop2");
+                int randomDrop = Random.Range(0, randomDropsArray.Length-1);
+                // instantiate random drop at player position
+                Instantiate(randomDropsArray[randomDrop], new Vector3(target.position.x, target.position.y , -3), Quaternion.identity);
+            }
             Destroy(gameObject);
+        }
+
+            
     }
 }

@@ -141,6 +141,7 @@ public class Player : MonoBehaviour
 
 
     void OnCollisionEnter2D(Collision2D other) {
+        Debug.Log("Collision with " + other.gameObject.tag);
 
         if(other.gameObject.tag == "easyDoor"){
             scenemanager.startEasyDungeon();

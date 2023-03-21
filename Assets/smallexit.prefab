@@ -71,8 +71,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -509839737
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: 0dcabbd43f5275c4483818f8dc334d6c, type: 3}
   m_Color: {r: 0.0754717, g: 0.0754717, b: 0.0754717, a: 1}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 6084332020565633064}
   m_Layer: 0
   m_Name: exitCollider
-  m_TagString: Untagged
+  m_TagString: levelExit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,7 +110,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5843743237123921527}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.03, y: -0.43, z: -0.062192798}
+  m_LocalPosition: {x: 0.03, y: -0.52, z: -0.062192798}
   m_LocalScale: {x: 3.1883872, y: 2.3212166, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -141,5 +141,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2, y: 0.05}
+  m_Size: {x: 0.2, y: 0.1}
   m_EdgeRadius: 0
